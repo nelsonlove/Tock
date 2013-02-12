@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
 	if (isset($_POST['password'])) { $password = $_POST['password']; } else { $password = ""; }
 
 	if (!$event or !$name or !$password) { $errmsg = 1; }
-#	if ($_SERVER['REMOTE_ADDR'] != $remote_ip and $_SERVER['REMOTE_ADDR'] != $test_ip) { $errmsg = 2; }
+	if ($_SERVER['REMOTE_ADDR'] != $remote_ip and $_SERVER['REMOTE_ADDR'] != $test_ip) { $errmsg = 2; }
 
 	$query = 'SELECT password FROM staff WHERE name = "' . $name . '" AND password = "' . $password . '";';
 	if ($result = $mysqli->query($query)) {
