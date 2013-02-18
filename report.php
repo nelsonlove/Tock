@@ -1,4 +1,5 @@
 <h1>Week-by-week time clock report</h1>
+<img src="logo.gif" width=191 height=54><br>
 <?php
 
 	# Include all the goodies
