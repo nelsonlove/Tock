@@ -1,5 +1,5 @@
 <img src="logo.gif" width=191 height=54><br>
-<h1>Employee time clock report</h1>
+<h4>Employee time clock report</h4>
 <?php
 
 	# Include all the goodies
