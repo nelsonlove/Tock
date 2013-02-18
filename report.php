@@ -55,7 +55,7 @@
 				
 				# Make counters for time clock events and scheduled days
 				$event_counter = 0;
-				$scheduled_days = 0;
+				$scheduled_days = 7;
 				
 				# Create an array that will later be used to generate a table
 				$table = array();
@@ -88,7 +88,7 @@
 					if ($table['times'][$i] == $start_time . " &ndash; " . $start_time) {
 						$table['times'][$i] = " &mdash; ";
 						# We're also going to increment our scheduled days Counter
-						$scheduled_days++;
+						$scheduled_days = $scheduled_days - 1;
 					}
 					
 					# Now we get the person's events for the active day
@@ -114,6 +114,8 @@
 					foreach ($a as $b) { $table[$b][$i] = $parsedEvents[$b]; }
 					
 				}
+				
+				echo $scheduled_days;
 				
 				# Now we echo the person's table if there have been events this week
 				if (($event_counter > 0) or ($scheduled_days > 0)) {
