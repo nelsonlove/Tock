@@ -1,3 +1,4 @@
+<h1>Tock</h1>
 <?php
 
 	# Include all the goodies
