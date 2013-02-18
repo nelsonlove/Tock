@@ -14,8 +14,8 @@
 	# Create a timeclock object
 	$timeclock = new timeclock();
 
-	# Populate the staff list with the names of active staff
-	$staff = $db->rquery("SELECT name FROM staff WHERE active = 1;");
+	# Populate the staff list with the names of all staff
+	$staff = $db->rquery("SELECT name FROM staff;");
 	
 	# Let's make a table of contents based on the weeks that wil have records
 	echo '<ul class="toc">' . "\n";
@@ -47,7 +47,7 @@
 			# Provide a link to the top of the page
 			echo '<a href="#">Top of page</a>' . "\n";
 			
-			# For each active staff member:
+			# For each staff member:
 			foreach ($staff as $name) {
 				
 				# Make a person object
