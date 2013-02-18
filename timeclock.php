@@ -1,7 +1,7 @@
 <body bgcolor="#aaaaaa">
 <?php
 
-$remote_ip = "108.20.201.161";
+$remote_ip = "108.7.229.132";
 $test_ip = "24.61.12.255";
 date_default_timezone_set("America/New_York");
 

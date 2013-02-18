@@ -88,7 +88,7 @@
 					if ($table['times'][$i] == $start_time . " &ndash; " . $start_time) {
 						$table['times'][$i] = " &mdash; ";
 						# We're also going to increment our scheduled days Counter
-						$scheduled_days = $scheduled_days - 1;
+						$scheduled_days--;
 					}
 					
 					# Now we get the person's events for the active day
