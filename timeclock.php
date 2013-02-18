@@ -116,7 +116,7 @@ if ($display_form = 1) { ?>
 		<tr><td><label>Name:</label></td><td>
 		<select id="name" name="name">
 		<option value=""></option>
-		<?php $query = "SELECT * FROM staff ORDER BY name ASC;";
+		<?php $query = "SELECT * FROM staff WHERE active = 1 ORDER BY name ASC;";
 		if ($result = $mysqli->query($query)) {
 			/* fetch associative array */
 			while ($row = $result->fetch_assoc()) {
