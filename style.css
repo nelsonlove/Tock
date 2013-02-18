@@ -1,9 +1,13 @@
 body {
-	font:10px helvetica,arial,sans-serif;
+	font:11px helvetica,arial,sans-serif;
 }
 
 table, tr, td {
 	border: 1px solid black;
 	width: 900px;
-	font:10px helvetica,arial,sans-serif;
+	font:11px helvetica,arial,sans-serif;
+}
+
+td {
+	padding: 0px;
 }
