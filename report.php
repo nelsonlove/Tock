@@ -1,4 +1,4 @@
-<h1>Tock</h1>
+<h1>Week-by-week time clock report</h1>
 <?php
 
 	# Include all the goodies
