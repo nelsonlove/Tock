@@ -53,8 +53,9 @@
 				# Make a person object
 				$person = new person($name);
 				
-				# Make a counter for the person's events in a given week
+				# Make counters for time clock events and scheduled days
 				$event_counter = 0;
+				$scheduled_days = 0;
 				
 				# Create an array that will later be used to generate a table
 				$table = array();
@@ -84,7 +85,11 @@
 					$start_time = date("g:ia", $person->schedule[$lc_day_name]['in']);
 					$end_time = date("g:ia", $person->schedule[$lc_day_name]['out']);
 					$table['times'][$i] = $start_time . " &ndash; " . $end_time;
-					if ($table['times'][$i] == $start_time . " &ndash; " . $start_time) { $table['times'][$i] = " &mdash; "; }
+					if ($table['times'][$i] == $start_time . " &ndash; " . $start_time) {
+						$table['times'][$i] = " &mdash; ";
+						# We're also going to increment our scheduled days Counter
+						$scheduled_days++;
+					}
 					
 					# Now we get the person's events for the active day
 					$events = array();
@@ -111,7 +116,7 @@
 				}
 				
 				# Now we echo the person's table if there have been events this week
-				if ($event_counter > 0) {
+				if (($event_counter > 0) and ($scheduled_days == 0)) {
 					echo "<h3>" . $person->name . " / " . $person->phone . " / " . $person->email . "</h3>" . "\n";
 					echo "<table>";
 					$tr = array("headings", "times", "in1", "out1", "in2", "out2");
