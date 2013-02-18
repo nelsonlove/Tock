@@ -1,5 +1,6 @@
+<html>
 <head>
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
 
@@ -129,3 +130,4 @@
 	
 ?>
 </body>
+</html>
