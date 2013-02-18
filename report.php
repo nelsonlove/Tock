@@ -1,3 +1,8 @@
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
 <img src="logo.gif" width=191 height=54><br>
 <h2>Employee time clock report</h2>
 <?php
@@ -123,3 +128,4 @@
 	}
 	
 ?>
+</body>
