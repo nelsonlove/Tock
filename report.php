@@ -111,7 +111,7 @@
 				# Now we echo the person's table if there have been events this week
 				if ($event_counter > 0) {
 					echo "<h3>" . $person->name . " / " . $person->phone . " / " . $person->email . "</h3>" . "\n";
-					echo "<table border=1>";
+					echo "<table>";
 					$tr = array("headings", "times", "in1", "out1", "in2", "out2");
 					foreach ($tr as $row) {
 						echo "<tr>" . "\n";
