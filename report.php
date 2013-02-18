@@ -1,4 +1,4 @@
-<img src="logo.gif" width=382 height=108><br>
+<img src="logo.gif" width=191 height=54><br>
 <h1>Employee time clock report</h1>
 <?php
 
