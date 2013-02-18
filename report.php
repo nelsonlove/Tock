@@ -80,10 +80,11 @@
 					# Here's our day headings
 					$table['headings'][$i] = $day_name;
 					
-					# Here's our scheduled times
+					# Here's our scheduled times, only put them in if a person is actually scheduled
 					$start_time = date("g:ia", $person->schedule[$lc_day_name]['in']);
 					$end_time = date("g:ia", $person->schedule[$lc_day_name]['out']);
 					$table['times'][$i] = $start_time . " &ndash; " . $end_time;
+					if ($table['times'][$i] == $start_time . " &ndash; " . $start_time) { $table['times'][$i] = " &mdash; "; }
 					
 					# Now we get the person's events for the active day
 					$events = array();
