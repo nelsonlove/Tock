@@ -2,7 +2,7 @@
 <?php
 
 $remote_ip = "108.20.201.161";
-$test_ip = "198.228.205.52";
+$test_ip = "24.61.12.255";
 date_default_timezone_set("America/New_York");
 
 function customError($errno, $errstr, $errfile, $errline) {
