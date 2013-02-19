@@ -87,7 +87,7 @@
 					$table['times'][$i] = $start_time . " &ndash; " . $end_time;
 					if ($table['times'][$i] == $start_time . " &ndash; " . $start_time) {
 						$table['times'][$i] = " &mdash; ";
-						# We're also going to increment our scheduled days Counter
+						# We're also going to decrement our scheduled days counter
 						$scheduled_days--;
 					}
 					
@@ -117,7 +117,7 @@
 				
 				# Now we echo the person's table if the staff member is active
 				# and if there have been events this week
-				if (($person-> active == 1) and ($event_counter > 0)) {
+				if ($person-> active == 1) {
 					echo "<h3>" . $person->name . " / " . $person->phone . " / " . $person->email . "</h3>" . "\n";
 					echo "<table>";
 					$tr = array("headings", "times", "in1", "out1", "in2", "out2");
