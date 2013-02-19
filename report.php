@@ -105,7 +105,7 @@
 					$parsedEvents = popEventArray($events,$nulltext);
 					foreach ($parsedEvents as &$row) {
 						if ($row != $nulltext) {
-							$row = date("h:ia",$row);
+							$row = date("g:ia",$row);
 						}
 					}
 					
