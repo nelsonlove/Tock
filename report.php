@@ -4,7 +4,7 @@
 </head>
 <body>
 
-<img src="logo.gif" width=191 height=54><br>
+<img src="logo.png"><br>
 <h2>Employee time clock report</h2>
 <?php
 

@@ -1,8 +1,10 @@
 <body bgcolor="#aaaaaa">
 <?php
 
-$remote_ip = "108.7.229.132";
-$test_ip = "24.61.12.255";
+// Data scrubbed
+
+$remote_ip = "[SCRUBBED]";
+$test_ip = "[SCRUBBED]";
 date_default_timezone_set("America/New_York");
 
 function customError($errno, $errstr, $errfile, $errline) {
@@ -26,7 +28,7 @@ function timestamp() {
 	return date("Y-m-d H:i:s",$t);
 }
 
-$mysqli = new mysqli('letsragedb.cbvqkpxnwcmb.us-east-1.rds.amazonaws.com', 'letsrage', 'letsrage1', 'hrdb');
+$mysqli = new mysqli('[SCRUBBED].us-east-1.rds.amazonaws.com', '[SCRUBBED]', '[SCRUBBED]', 'hrdb');
 if (mysqli_connect_errno()) {
 	exit('Connect failed: '. mysqli_connect_error());
 }
@@ -40,7 +42,7 @@ $statusmsg = 0; ?>
 
 <center>
 <div style="border: 4px double black; background-color: white; padding: 20; margin: 30; display: inline-block;">
-<img src="logo.gif" width=191 height=54><br><br>
+<img src="logo.png" width=191 height=54><br><br>
 <div style="font-size: smaller; margin: 0;"><?php echo currDate() . " / " . currTime(); ?></div><br>
 
 <?php
@@ -95,7 +97,7 @@ if (isset($_POST['submit'])) {
 	} elseif ($errmsg == 1) {
 		$errmsg = "Please make sure you have completed the form.";
 	} elseif ($errmsg == 2) {
-		$errmsg = "Wrong location! Make sure you are currently on the LET'S RAGE Wi-Fi network.";
+		$errmsg = "Wrong location! Make sure you are currently on the Wi-Fi network.";
 	} elseif ($errmsg == 3 ) {
 		$errmsg = "Wrong password! Please retype your password.";
 	} elseif ($errmsg == 4) {
