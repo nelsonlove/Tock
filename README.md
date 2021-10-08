@@ -1,7 +1,7 @@
 Tock
 ====
 
-Simple scheduling and reports for Let's Rage LLC.
+Simple scheduling and reports for Red Blue Records LLC.
 
 - Runs on AWS-hosted MySQL database
 - Stores user records containing:
